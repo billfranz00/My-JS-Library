@@ -77,3 +77,14 @@ function countVowels(array) {
 // var nestedArr = ['Elie', ['Matt', ['Tim']],['Colt',['Whisky',['Janey'], 'Tom']], 'Lorien'];
 
 countVowels(nestedArr)
+
+// takes array and number and moves each elementin the array that many number spaces to the right
+function rotateArray(array, num) {
+    var amount = num % array.length; // take remainder of number and length of the array to get actual amount of spaces
+    for(var i = 0; i < amount; i++) {
+        array.unshift(array.pop()) // removes from the back and adds to the front
+    }
+    return array; // returns finished array
+}
+
+// var arr = [1, 2, 3];
