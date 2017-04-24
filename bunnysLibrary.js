@@ -88,3 +88,22 @@ function rotateArray(array, num) {
 }
 
 // var arr = [1, 2, 3];
+
+// creates grid with specific number of rows and columns and alternates X's and O's for each row
+function makeXOgrid(row, col) {
+    var array = []
+    for(var i = 0; i < row; i++) {
+        array.push([])
+        for(j = 0; j < col; j++) {
+            if(j % 2 === 0) {
+                array[i].push("X")
+            }
+            else {
+                array[i].push("O")
+            }
+        }
+    }
+    return array;
+}
+
+// makeXOgrid(2, 4) --> [["X", "O", "X", "O"], ["X", "O", "X", "O"]]
